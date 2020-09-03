@@ -9,7 +9,7 @@ int getPower(int &a, int m)  //引用传递，传递值不能为空，指针传递可以为空
 	return a;
 }
 
-double getPower(double &b, int m)
+double getPower(double &b, int m)  //函数重载
 {
 	b = pow(b,m);
 	return b;
