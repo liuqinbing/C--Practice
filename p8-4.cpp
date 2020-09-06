@@ -2,6 +2,7 @@
 #include<iostream>
 using namespace std;
 
+//函数模板
 //template<typename T1, typename T2>  作用完全同下
 template<class T1, class T2>
 T1 func(T1 a, T2 b) {
