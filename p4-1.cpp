@@ -11,7 +11,7 @@ struct A{
 	int age;
 };
 
-void main()
+int main()
 {
 	//A a={2001,"liming",'F',18};
 	A a={2001,'F',18};
@@ -19,4 +19,6 @@ void main()
 	//cout<<a.name<<endl;
 	cout<<a.sex<<endl;
 	cout<<a.age<<endl;
+
+	return 0;
 }
