@@ -3,6 +3,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 int main()
 {
@@ -13,7 +15,7 @@ int main()
     in = open("p3_1.in", O_RDONLY);//打开文件
     out = open("p3_1.out", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
 
-    while ((nread = read(in, block, sizeof(block))) > 0)//读取文件内容
+    while ((nread = read(in, block, sizeof(block))) > 0)//读取文件内容，存放于block，并在末尾添加\0
     {
         write(out, block, nread);//往文件写入内容
     }
