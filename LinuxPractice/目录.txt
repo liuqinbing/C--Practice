@@ -1,0 +1,31 @@
+p3_1 /*底层文件操作：关于open、read、write系统调用*/
+
+p3_2 /*底层文件操作：关于lseek系统调用，对读写指针进行设置*/
+
+p3_3 /*二进制I/O：读写二进制数组，fread和fwrite函数*/
+
+p3_4 /*一次一个字符的I/O：读取：fgetc、getc和getchar()函数；写入：fputc、putc和putchar函数*/
+
+p3_5 /*一行字符串I/O：读取：fgets和gets函数；写入：fputs函数*/
+
+p3_6 /*格式化I/O：printf、fprintf和sprintf函数*/
+
+p3_7 /*文件结束和错误标识符：ferror、feof和clearerr函数*/
+
+p3_8 /*目录操作*/
+
+p3_9 /*错误处理：函数或系统调用运行失败原因存储在外部变量errno，使用perror和strerror函数获取错误*/
+
+p4_1 /*时间和日期：time、difftime、localtime、gmtime、mktime、asctime、ctime函数*/
+
+p7_1 /*内存分配和释放：malloc函数（返回void *类型的内存地址）、realloc函数、free函数*/
+
+p7_2 /*锁文件：通过锁文件来完成锁的功能*/
+
+p7_3_1 /*文件区域锁定：fcntl系统调用（F_SETLK，设置加锁和解锁）*/
+
+p7_3_2 /*文件区域锁定：fcntl系统调用（F_GETLK，获取锁信息）*/
+
+p7_3_3 /*在同一个区域加锁*/
+
+p7_3_4 /*文件区域锁定：fcntl系统调用（F_SETLKW，直到获取锁或收到信号才返回）*/
