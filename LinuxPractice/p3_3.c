@@ -9,7 +9,7 @@ int main()
     FILE *fp = fopen("p3_3.txt", "w+");
 
     //写入数据到文件，strlen获取字符串实际长度，不包含\0；sizeof获取字符数组长度，包含\0
-    fwrite(c, strlen(c)+1, 1, fp);
+    fwrite(c, strlen(c), 1, fp);
 
     //判断是否发生了错误
     if(ferror(fp)){
@@ -20,8 +20,8 @@ int main()
     //设置读写指针位置
     fseek(fp, 0, SEEK_SET);
 
-    //读取文件
-    fread(buffer, strlen(c)+1, 1, fp);
+    //读取文件，不会为字符串末尾添加\0
+    fread(buffer, strlen(c), 1, fp);
 
     //判断是否发生了错误
     if(ferror(fp)){
