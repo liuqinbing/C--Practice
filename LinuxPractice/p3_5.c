@@ -5,8 +5,8 @@ int main()
 {
     char str[2];
 
-    FILE *in = fopen("LinuxPractice/p3_5.in", "r+");
-    FILE *out = fopen("LinuxPractice/p3_5.out", "w+");
+    FILE *in = fopen("p3_5.in", "r+");
+    FILE *out = fopen("p3_5.out", "w+");
 
     while (1)
     {

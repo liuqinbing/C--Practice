@@ -6,7 +6,7 @@ int main()
     FILE *fp;
     char c;
 
-    fp = fopen("LinuxPractice/p3_7.out", "w");//打开一个只写文件
+    fp = fopen("p3_7.out", "w");//打开一个只写文件
 
     c = fgetc(fp);//进行读操作，发生错误
     if (ferror(fp))

@@ -3,7 +3,7 @@
 
 int main()
 {
-    FILE *fp = fopen("LinuxPractice/p3_6.out", "w+");
+    FILE *fp = fopen("p3_6.out", "w+");
     char s[] = "world!";
     char str[10];
 

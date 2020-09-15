@@ -8,7 +8,7 @@
 int main()
 {
     char buffer[4];
-    int in = open("LinuxPractice/p3_1.in", O_RDONLY|O_WRONLY);
+    int in = open("p3_1.in", O_RDONLY|O_WRONLY);
 
     lseek(in, 1, SEEK_SET);//设置读写指针位置
 

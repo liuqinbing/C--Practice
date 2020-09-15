@@ -6,8 +6,8 @@ int main()
     int c;
 
     //打开文件
-    FILE *in = fopen("LinuxPractice/p3_4.in", "r+");
-    FILE *out = fopen("LinuxPractice/p3_4.out", "w+");
+    FILE *in = fopen("p3_4.in", "r+");
+    FILE *out = fopen("p3_4.out", "w+");
 
     while (1)
     {
@@ -37,10 +37,14 @@ int main()
     fclose(out);
 
     printf("\n请输入字符：");
-    c = getchar();//从标准输入读取一个字符
 
-    printf("\n输出的字符：");
-    putchar(c);//将一个字符写到标准输出
+    //从标准输入读取一个字符，当获取到换行符时结束
+    //由于缓冲的机制，导致输入输出的结果就好像是读取了一行字符串再输出一行字符串
+    while((c = getchar()) != '\n')
+    {
+        putchar(c);//将一个字符写到标准输出
+    }
+    
     printf("\n");
 
     return 0;

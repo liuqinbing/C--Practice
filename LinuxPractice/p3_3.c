@@ -6,7 +6,7 @@ int main()
 {
      char buffer[20];
     char c[20] = "hello world!";
-    FILE *fp = fopen("LinuxPractice/p3_3.txt", "w+");
+    FILE *fp = fopen("p3_3.txt", "w+");
 
     //写入数据到文件，strlen获取字符串实际长度，不包含\0；sizeof获取字符数组长度，包含\0
     fwrite(c, strlen(c)+1, 1, fp);
