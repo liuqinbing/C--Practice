@@ -1,8 +1,10 @@
+一、文件操作
+
 p3_1 /*底层文件操作：关于open、read、write系统调用*/
 
 p3_2 /*底层文件操作：关于lseek系统调用，对读写指针进行设置*/
 
-p3_3 /*二进制I/O：读写二进制数组，fread和fwrite函数*/
+p3_3 /*二进制I/O：读写二进制数组，fread和fwrite函数；fopen、fclose、fseek、fflush*/
 
 p3_4 /*一次一个字符的I/O：读取：fgetc、getc和getchar()函数；写入：fputc、putc和putchar函数*/
 
@@ -12,13 +14,23 @@ p3_6 /*格式化I/O：printf、fprintf和sprintf函数*/
 
 p3_7 /*文件结束和错误标识符：ferror、feof和clearerr函数*/
 
+二、目录操作
+
 p3_8 /*目录操作*/
+
+三、错误处理
 
 p3_9 /*错误处理：函数或系统调用运行失败原因存储在外部变量errno，使用perror和strerror函数获取错误*/
 
+四、时间操作
+
 p4_1 /*时间和日期：time、difftime、localtime、gmtime、mktime、asctime、ctime函数*/
 
+五、内存管理
+
 p7_1 /*内存分配和释放：malloc函数（返回void *类型的内存地址）、realloc函数、free函数*/
+
+六、文件锁
 
 p7_2 /*锁文件：通过锁文件来完成锁的功能*/
 
@@ -30,6 +42,8 @@ p7_3_3 /*在同一个区域加锁*/
 
 p7_3_4 /*文件区域锁定：fcntl系统调用（F_SETLKW，直到获取锁或收到信号才返回）*/
 
+七、进程
+
 p11_1 /*启动新进程：system函数（通过shell来运行命令），这种方法少用*/
 
 p11_2 /*启动新进程：替换原先进程，原先进程不再运行，exec系列函数*/
@@ -38,10 +52,48 @@ p11_3 /*启动新进程：复制原先进程，两个进程同时运行，fork�
 
 p11_4 /*等待一个进程结束：使用wait函数等待子进程结束，并获取子进程返回的状态信息（waitpid函数可以指定具体的进程）*/
 
+八、输入输出重定向
+
 p11_5 /*输入输出重定向：freopen函数*/
+
+九、信号
 
 p11_6 /*信号接收并处理：signal函数，但不推荐使用该函数。例：处理SIGINT信号（即Ctrl+C）*/
 
 p11_7 /*发送信号：kill函数；闹钟功能：alarm函数；暂停执行直到收到信号：parse函数。但不推荐使用这些函数。*/
 
 p11_8 /*健壮的信号接口：sigaction函数。信号推荐使用函数*/
+
+十、线程
+
+p12_1 /*线程：pthread_create、pthread_join和pthread_exit函数*/
+
+p12_2 /*线程的属性：pthread_attr_init、pthread_attr_destroy和一些pthread_attr_set...、pthread_attr_get...函数*/
+
+p12_3 /*取消线程：pthread_cancel、pthread_setcancelstate和pthread_setcanceltype*/
+
+线程同步
+
+p12_4 /*（POSIX扩展的）信号量：sem_init、sem_wait、sem_post和sem_destroy，实现线程同步，也可被设置成多进程共享从而实现进程同步*/
+
+p12_5 /*互斥量：pthread_mutex_init、pthread_mutex_lock、pthread_mutex_unlock和pthread_mutex_destroy，实现多线程同步*/
+
+十一、IPC（进程间通信）机制：信号量、共享内存、消息队列
+
+进程同步
+
+p14_1_1 /*(Linux)信号量：semget、semctl和semop函数，实现进程同步*/
+
+p14_1_2 /*与p14_1_1配合使用同一信号量*/
+
+共享内存
+
+p14_2_1 /*共享内存：shmget、shmat、shmdt和shmctl函数，实现进程间传输数据*/
+
+p14_2_2 /*与p14_2_1配合使用同一信号量组和同一共享内存，实现生产者消费者*/
+
+消息队列
+
+p14_3_1 /*消息队列：msgget、msgsnd、msgrcv和msgctl函数*/
+
+p14_3_2 /*与p14_3_1发生消息，p14_3_2接收消息*/
