@@ -1,4 +1,4 @@
-/*二进制I/O：读写二进制数组，fread和fwrite函数*/
+/*二进制I/O：读写二进制数组，fread和fwrite函数；fopen、fclose、fseek、fflush*/
 #include <stdio.h>
 #include <string.h>
 
