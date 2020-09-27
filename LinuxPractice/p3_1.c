@@ -1,4 +1,4 @@
-/*底层文件操作：关于open、read、write系统调用*/
+/*底层文件操作：关于open、read、write、close系统调用*/
 #include <unistd.h>
 #include <sys/stat.h>
 #include <fcntl.h>
