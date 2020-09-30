@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <errno.h>
 
 int main()
 {
@@ -12,8 +13,17 @@ int main()
     int in, out;
     int nread;
 
-    in = open("p3_1.in", O_RDONLY);//打开文件
-    out = open("p3_1.out", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
+    //打开文件
+    if((in = open("p3_1.in", O_RDONLY)) == -1)
+    {
+        perror("open p3_1.in failed\n");
+        exit(1);
+    }
+    if((out = open("p3_1.out", O_RDWR | O_CREAT, S_IRUSR | S_IWUSR)) == -1)
+    {
+        perror("open p3_1.out failed\n");
+        exit(1);
+    }
 
     while ((nread = read(in, block, sizeof(block))) > 0)//读取文件内容，存放于block，并在末尾添加\0
     {
